@@ -1,0 +1,742 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='renderer', content='webkit')
+    title H+ 后台主题UI框架 - 主页
+    meta(name='keywords', content='H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台')
+    meta(name='description', content='H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术')
+    //if lt IE 8
+      script.
+        alert('H+已不支持IE6-8，请使用谷歌、火狐等浏览器\\n或360、QQ等国产浏览器的极速模式浏览本页面！');
+    link(href='css/bootstrap.min.css?v=3.4.0', rel='stylesheet')
+    link(href='css/font-awesome.min.css?v=4.3.0', rel='stylesheet')
+    link(href='css/animate.css', rel='stylesheet')
+    link(href='css/style.css?v=3.0.0', rel='stylesheet')
+  body.fixed-sidebar.full-height-layout.gray-bg
+    #wrapper
+      // 左侧导航开始
+      nav.navbar-default.navbar-static-side(role='navigation')
+        .sidebar-collapse
+          ul#side-menu.nav
+            li.nav-header
+              .dropdown.profile-element
+                span
+                  img.img-circle(alt='image', src='img/profile_small.jpg')
+                a.dropdown-toggle(data-toggle='dropdown', href='#')
+                  span.clear
+                    span.block.m-t-xs
+                      strong.font-bold Beaut-zihan
+                    span.text-muted.text-xs.block
+                      | 超级管理员
+                      b.caret
+                ul.dropdown-menu.animated.fadeInRight.m-t-xs
+                  li
+                    a.J_menuItem(href='form_avatar.html') 修改头像
+                  li
+                    a.J_menuItem(href='profile.html') 个人资料
+                  li
+                    a.J_menuItem(href='contacts.html') 联系我们
+                  li
+                    a.J_menuItem(href='mailbox.html') 信箱
+                  li.divider
+                  li
+                    a(href='login.html') 安全退出
+              .logo-element
+                | H+
+            li
+              a(href='#')
+                i.fa.fa-home
+                span.nav-label 主页
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='index_v1.html', data-index='0') 主页示例一
+                li
+                  a.J_menuItem(href='index_v2.html') 主页示例二
+                li
+                  a.J_menuItem(href='index_v3.html') 主页示例三
+                li
+                  a.J_menuItem(href='index_v4.html') 主页示例四
+                li
+                  a(href='index_v5.html', target='_blank') 主页示例五
+            li
+              a.J_menuItem(href='layouts.html')
+                i.fa.fa-columns
+                span.nav-label 布局
+            li
+              a(href='#')
+                i.fa.fa.fa-bar-chart-o
+                span.nav-label 统计图表
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='graph_echarts.html') 百度ECharts
+                li
+                  a.J_menuItem(href='graph_flot.html') Flot
+                li
+                  a.J_menuItem(href='graph_morris.html') Morris.js
+                li
+                  a.J_menuItem(href='graph_rickshaw.html') Rickshaw
+                li
+                  a.J_menuItem(href='graph_peity.html') Peity
+                li
+                  a.J_menuItem(href='graph_sparkline.html') Sparkline
+                li
+                  a.J_menuItem(href='graph_metrics.html') 图表组合
+            li
+              a(href='mailbox.html')
+                i.fa.fa-envelope
+                span.nav-label 信箱
+                span.label.label-warning.pull-right 16
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='mailbox.html') 收件箱
+                li
+                  a.J_menuItem(href='mail_detail.html') 查看邮件
+                li
+                  a.J_menuItem(href='mail_compose.html') 写信
+            li
+              a(href='#')
+                i.fa.fa-edit
+                span.nav-label 表单
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='form_basic.html') 基本表单
+                li
+                  a.J_menuItem(href='form_validate.html') 表单验证
+                li
+                  a.J_menuItem(href='form_advanced.html') 高级插件
+                li
+                  a.J_menuItem(href='form_wizard.html') 表单向导
+                li
+                  a(href='#')
+                    | 文件上传
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='form_webuploader.html') 百度WebUploader
+                    li
+                      a.J_menuItem(href='form_file_upload.html') DropzoneJS
+                    li
+                      a.J_menuItem(href='form_avatar.html') 头像裁剪上传
+                li
+                  a(href='#')
+                    | 编辑器
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='form_editors.html') 富文本编辑器
+                    li
+                      a.J_menuItem(href='form_simditor.html') simditor
+                    li
+                      a.J_menuItem(href='form_markdown.html') MarkDown编辑器
+                    li
+                      a.J_menuItem(href='code_editor.html') 代码编辑器
+                li
+                  a.J_menuItem(href='suggest.html') 搜索自动补全
+                li
+                  a.J_menuItem(href='layerdate.html') 日期选择器layerDate
+            li
+              a(href='#')
+                i.fa.fa-desktop
+                span.nav-label 页面
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='contacts.html') 联系人
+                li
+                  a.J_menuItem(href='profile.html') 个人资料
+                li
+                  a(href='#')
+                    | 项目管理
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='projects.html') 项目
+                    li
+                      a.J_menuItem(href='project_detail.html') 项目详情
+                li
+                  a.J_menuItem(href='teams_board.html') 团队管理
+                li
+                  a.J_menuItem(href='social_feed.html') 社交
+                li
+                  a.J_menuItem(href='clients.html') 客户管理
+                li
+                  a.J_menuItem(href='file_manager.html') 文件管理器
+                li
+                  a.J_menuItem(href='calendar.html') 日历
+                li
+                  a(href='#')
+                    | 博客
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='blog.html') 文章列表
+                    li
+                      a.J_menuItem(href='article.html') 文章详情
+                li
+                  a.J_menuItem(href='faq.html') 帮助中心
+                li
+                  a(href='#')
+                    | 时间轴
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='timeline.html') 时间轴
+                    li
+                      a.J_menuItem(href='timeline_v2.html') 时间轴v2
+                li
+                  a.J_menuItem(href='pin_board.html') 标签墙
+                li
+                  a(href='#')
+                    | 单据
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='invoice.html') 单据
+                    li
+                      a.J_menuItem(href='invoice_print.html') 单据打印
+                li
+                  a.J_menuItem(href='search_results.html') 搜索结果
+                li
+                  a.J_menuItem(href='forum_main.html') 论坛
+                li
+                  a(href='#')
+                    | 即时通讯
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='chat_view.html') 聊天窗口
+                    li
+                      a.J_menuItem(href='webim.html') layIM
+                li
+                  a(href='#')
+                    | 登录注册相关
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a(href='login.html', target='_blank') 登录页面
+                    li
+                      a(href='login_v2.html', target='_blank') 登录页面v2
+                    li
+                      a(href='register.html', target='_blank') 注册页面
+                    li
+                      a(href='lockscreen.html', target='_blank') 登录超时
+                li
+                  a.J_menuItem(href='404.html') 404页面
+                li
+                  a.J_menuItem(href='500.html') 500页面
+                li
+                  a.J_menuItem(href='empty_page.html') 空白页
+            li
+              a(href='#')
+                i.fa.fa-flask
+                span.nav-label UI元素
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='typography.html') 排版
+                li
+                  a(href='#')
+                    | 字体图标
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='icons.html') Font Awesome
+                    li
+                      a.J_menuItem(href='iconfont.html') 阿里巴巴矢量图标库
+                li
+                  a(href='#')
+                    | 拖动排序
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='draggable_panels.html') 拖动面板
+                    li
+                      a.J_menuItem(href='agile_board.html') 任务清单
+                li
+                  a.J_menuItem(href='buttons.html') 按钮
+                li
+                  a.J_menuItem(href='tabs_panels.html') 选项卡 & 面板
+                li
+                  a.J_menuItem(href='notifications.html') 通知 & 提示
+                li
+                  a.J_menuItem(href='badges_labels.html') 徽章，标签，进度条
+                li
+                  a.J_menuItem(href='grid_options.html') 栅格
+                li
+                  a(href='#')
+                    | 弹框插件
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='layer.html') Web弹层组件layer
+                    li
+                      a.J_menuItem(href='modal_window.html') 模态窗口
+                    li
+                      a.J_menuItem(href='sweetalert.html') SweetAlert
+                li
+                  a(href='#')
+                    | 树形视图
+                    span.fa.arrow
+                  ul.nav.nav-third-level
+                    li
+                      a.J_menuItem(href='jstree.html') jsTree
+                    li
+                      a.J_menuItem(href='tree_view.html') Bootstrap Tree View
+                    li
+                      a.J_menuItem(href='nestable_list.html') nestable
+                li
+                  a.J_menuItem(href='toastr_notifications.html') Toastr通知
+                li
+                  a.J_menuItem(href='diff.html') 文本对比
+                li
+                  a.J_menuItem(href='spinners.html') 加载动画
+                li
+                  a.J_menuItem(href='widgets.html') 小部件
+            li
+              a(href='#')
+                i.fa.fa-table
+                span.nav-label 表格
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='table_basic.html') 基本表格
+                li
+                  a.J_menuItem(href='table_data_tables.html') DataTables
+                li
+                  a.J_menuItem(href='table_jqgrid.html') jqGrid
+                li
+                  a.J_menuItem(href='table_foo_table.html') Foo Tables
+            li
+              a(href='#')
+                i.fa.fa-picture-o
+                span.nav-label 相册
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='basic_gallery.html') 基本图库
+                li
+                  a.J_menuItem(href='carousel.html') 图片切换
+                li
+                  a.J_menuItem(href='layerphotos.html') layer相册
+                li
+                  a.J_menuItem(href='blueimp.html') Blueimp相册
+            li
+              a.J_menuItem(href='css_animation.html')
+                i.fa.fa-magic
+                span.nav-label CSS动画
+            li
+              a(href='#')
+                i.fa.fa-cutlery
+                span.nav-label 工具
+                span.fa.arrow
+              ul.nav.nav-second-level
+                li
+                  a.J_menuItem(href='form_builder.html') 表单构建器
+      // 左侧导航结束
+      // 右侧部分开始
+      #page-wrapper.gray-bg.dashbard-1
+        .row.border-bottom
+          nav.navbar.navbar-static-top(role='navigation', style='margin-bottom: 0')
+            .navbar-header
+              a.navbar-minimalize.minimalize-styl-2.btn.btn-primary(href='#')
+                i.fa.fa-bars
+              form.navbar-form-custom(role='search', method='post', action='search_results.html')
+                .form-group
+                  input#top-search.form-control(type='text', placeholder='请输入您需要查找的内容 …', name='top-search')
+            ul.nav.navbar-top-links.navbar-right
+              li
+                span.m-r-sm.text-muted.welcome-message
+                  a(href='index_1.html', title='返回首页')
+                    i.fa.fa-home
+                  | 欢迎使用H+后台主题UI框架
+              li.dropdown
+                a.dropdown-toggle.count-info(data-toggle='dropdown', href='#')
+                  i.fa.fa-envelope
+                  span.label.label-warning 16
+                ul.dropdown-menu.dropdown-messages
+                  li.m-t-xs
+                    .dropdown-messages-box
+                      a.pull-left(href='profile.html')
+                        img.img-circle(alt='image', src='img/a7.jpg')
+                      .media-body
+                        small.pull-right 46小时前
+                        strong 小四
+                        |  这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                        br
+                        small.text-muted 3天前 2014.11.8
+                  li.divider
+                  li
+                    .dropdown-messages-box
+                      a.pull-left(href='profile.html')
+                        img.img-circle(alt='image', src='img/a4.jpg')
+                      .media-body
+                        small.pull-right.text-navy 25小时前
+                        strong 国民岳父
+                        |  如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
+                        br
+                        small.text-muted 昨天
+                  li.divider
+                  li
+                    .text-center.link-block
+                      a.J_menuItem(href='mailbox.html')
+                        i.fa.fa-envelope
+                        strong  查看所有消息
+              li.dropdown
+                a.dropdown-toggle.count-info(data-toggle='dropdown', href='#')
+                  i.fa.fa-bell
+                  span.label.label-primary 8
+                ul.dropdown-menu.dropdown-alerts
+                  li
+                    a(href='mailbox.html')
+                      div
+                        i.fa.fa-envelope.fa-fw
+                        |  您有16条未读消息
+                        span.pull-right.text-muted.small 4分钟前
+                  li.divider
+                  li
+                    a(href='profile.html')
+                      div
+                        i.fa.fa-qq.fa-fw
+                        |  3条新回复
+                        span.pull-right.text-muted.small 12分钟钱
+                  li.divider
+                  li
+                    .text-center.link-block
+                      a.J_menuItem(href='notifications.html')
+                        strong 查看所有
+                        i.fa.fa-angle-right
+              li
+                a(href='login.html')
+                  i.fa.fa-sign-out
+                  |  退出
+              li
+                a.right-sidebar-toggle
+                  i.fa.fa-tasks
+        .row.content-tabs
+          button.roll-nav.roll-left.J_tabLeft
+            i.fa.fa-angle-double-left
+          nav.page-tabs.J_menuTabs
+            .page-tabs-content
+              a.active.J_menuTab(href='javascript:;', data-id='index_v1.html') 首页
+          button.roll-nav.roll-right.J_tabRight
+            i.fa.fa-angle-double-right
+        #content-main.row.J_mainContent
+          iframe.J_iframe(name='iframe0', width='100%', height='100%', src='index_v1.html?v=3.0', frameborder='0', data-id='index_v1.html', seamless='')
+        .footer
+          .pull-right
+            | © 2014-2015
+            a(href='http://www.zi-han.net/', target='_blank') zihan's blog
+      // 右侧部分结束
+      // 右侧边栏开始
+      #right-sidebar
+        .sidebar-container
+          ul.nav.nav-tabs.navs-3
+            li.active
+              a(data-toggle='tab', href='#tab-1')
+                | 通知
+            li
+              a(data-toggle='tab', href='#tab-2')
+                | 项目进度
+            li
+              a(data-toggle='tab', href='#tab-3')
+                i.fa.fa-gear
+          .tab-content
+            #tab-1.tab-pane.active
+              .sidebar-title
+                h3
+                  i.fa.fa-comments-o
+                  |  最新通知
+                small
+                  i.fa.fa-tim
+                  |  您当前有10条未读信息
+              div
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a1.jpg')
+                      .m-t-xs
+                        i.fa.fa-star.text-warning
+                        i.fa.fa-star.text-warning
+                    .media-body
+                      | 据天津日报报道：瑞海公司董事长于学伟，副董事长董社轩等10人在13日上午已被控制。
+                      br
+                      small.text-muted 今天 4:21
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a2.jpg')
+                    .media-body
+                      | HCY48之音乐大魔王会员专属皮肤已上线，快来一键换装拥有他，宣告你对华晨宇的爱吧！
+                      br
+                      small.text-muted 昨天 2:45
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a3.jpg')
+                      .m-t-xs
+                        i.fa.fa-star.text-warning
+                        i.fa.fa-star.text-warning
+                        i.fa.fa-star.text-warning
+                    .media-body
+                      | 写的好！与您分享
+                      br
+                      small.text-muted 昨天 1:10
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a4.jpg')
+                    .media-body
+                      | 国外极限小子的炼成！这还是亲生的吗！！
+                      br
+                      small.text-muted 昨天 8:37
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a8.jpg')
+                    .media-body
+                      | 一只流浪狗被收留后，为了减轻主人的负担，坚持自己觅食，甚至......有些东西，可能她比我们更懂。
+                      br
+                      small.text-muted 今天 4:21
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a7.jpg')
+                    .media-body
+                      | 这哥们的新视频又来了，创意杠杠滴，帅炸了！
+                      br
+                      small.text-muted 昨天 2:45
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a3.jpg')
+                      .m-t-xs
+                        i.fa.fa-star.text-warning
+                        i.fa.fa-star.text-warning
+                        i.fa.fa-star.text-warning
+                    .media-body
+                      | 最近在补追此剧，特别喜欢这段表白。
+                      br
+                      small.text-muted 昨天 1:10
+                .sidebar-message
+                  a(href='#')
+                    .pull-left.text-center
+                      img.img-circle.message-avatar(alt='image', src='img/a4.jpg')
+                    .media-body
+                      | 我发起了一个投票 【你认为下午大盘会翻红吗？】
+                      br
+                      small.text-muted 星期一 8:37
+            #tab-2.tab-pane
+              .sidebar-title
+                h3
+                  i.fa.fa-cube
+                  |  最新任务
+                small
+                  i.fa.fa-tim
+                  |  您当前有14个任务，10个已完成
+              ul.sidebar-list
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 市场调研
+                    |  按要求接收教材；
+                    .small 已完成： 22%
+                    .progress.progress-mini
+                      .progress-bar.progress-bar-warning(style='width: 22%;')
+                    .small.text-muted.m-t-xs 项目截止： 4:00 - 2015.10.01
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 可行性报告研究报上级批准
+                    |  编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
+                    .small 已完成： 48%
+                    .progress.progress-mini
+                      .progress-bar(style='width: 48%;')
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 立项阶段
+                    |  东风商用车公司 采购综合综合查询分析系统项目进度阶段性报告武汉斯迪克科技有限公司
+                    .small 已完成： 14%
+                    .progress.progress-mini
+                      .progress-bar.progress-bar-info(style='width: 14%;')
+                li
+                  a(href='#')
+                    span.label.label-primary.pull-right NEW
+                    h4 设计阶段
+                    // <div class="small pull-right m-t-xs">9小时以后</div>
+                    | 项目进度报告(Project Progress Report)
+                    .small 已完成： 22%
+                    .small.text-muted.m-t-xs 项目截止： 4:00 - 2015.10.01
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 拆迁阶段
+                    |  科研项目研究进展报告 项目编号: 项目名称: 项目负责人:
+                    .small 已完成： 22%
+                    .progress.progress-mini
+                      .progress-bar.progress-bar-warning(style='width: 22%;')
+                    .small.text-muted.m-t-xs 项目截止： 4:00 - 2015.10.01
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 建设阶段
+                    |  编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
+                    .small 已完成： 48%
+                    .progress.progress-mini
+                      .progress-bar(style='width: 48%;')
+                li
+                  a(href='#')
+                    .small.pull-right.m-t-xs 9小时以后
+                    h4 获证开盘
+                    |  编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
+                    .small 已完成： 14%
+                    .progress.progress-mini
+                      .progress-bar.progress-bar-info(style='width: 14%;')
+            #tab-3.tab-pane
+              .sidebar-title
+                h3
+                  i.fa.fa-gears
+                  |  设置
+              .setings-item
+                span
+                  | 显示通知
+                .switch
+                  .onoffswitch
+                    input#example.onoffswitch-checkbox(type='checkbox', name='collapsemenu')
+                    label.onoffswitch-label(for='example')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 隐藏聊天窗口
+                .switch
+                  .onoffswitch
+                    input#example2.onoffswitch-checkbox(type='checkbox', name='collapsemenu', checked='')
+                    label.onoffswitch-label(for='example2')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 清空历史记录
+                .switch
+                  .onoffswitch
+                    input#example3.onoffswitch-checkbox(type='checkbox', name='collapsemenu')
+                    label.onoffswitch-label(for='example3')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 显示聊天窗口
+                .switch
+                  .onoffswitch
+                    input#example4.onoffswitch-checkbox(type='checkbox', name='collapsemenu')
+                    label.onoffswitch-label(for='example4')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 显示在线用户
+                .switch
+                  .onoffswitch
+                    input#example5.onoffswitch-checkbox(type='checkbox', checked='', name='collapsemenu')
+                    label.onoffswitch-label(for='example5')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 全局搜索
+                .switch
+                  .onoffswitch
+                    input#example6.onoffswitch-checkbox(type='checkbox', checked='', name='collapsemenu')
+                    label.onoffswitch-label(for='example6')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .setings-item
+                span
+                  | 每日更新
+                .switch
+                  .onoffswitch
+                    input#example7.onoffswitch-checkbox(type='checkbox', name='collapsemenu')
+                    label.onoffswitch-label(for='example7')
+                      span.onoffswitch-inner
+                      span.onoffswitch-switch
+              .sidebar-content
+                h4 设置
+                .small
+                  | 你可以从这里设置一些常用选项，当然啦，这个只是个演示的示例。
+      // 右侧边栏结束
+      // mini聊天窗口开始
+      .small-chat-box.fadeInRight.animated
+        .heading(draggable='true')
+          small.chat-date.pull-right
+            | 2015.9.1
+          |  与 Beau-zihan 聊天中
+        .content
+          .left
+            .author-name
+              | Beau-zihan
+              small.chat-date
+                | 10:02
+            .chat-message.active
+              | 你好
+          .right
+            .author-name
+              | 游客
+              small.chat-date
+                | 11:24
+            .chat-message
+              | 你好，请问H+有帮助文档吗？
+          .left
+            .author-name
+              | Beau-zihan
+              small.chat-date
+                | 08:45
+            .chat-message.active
+              | 有，购买的H+源码包中有帮助文档，位于docs文件夹下
+          .right
+            .author-name
+              | 游客
+              small.chat-date
+                | 11:24
+            .chat-message
+              | 那除了帮助文档还提供什么样的服务？
+          .left
+            .author-name
+              | Beau-zihan
+              small.chat-date
+                | 08:45
+            .chat-message.active
+              | 1. 所有源码
+              br
+              |  2. 必要的技术支持
+              br
+              |  3. 终生免费升级服务
+              br
+              |  4. 授权
+        .form-chat
+          .input-group.input-group-sm
+            input.form-control(type='text')
+            span.input-group-btn
+              button.btn.btn-primary(type='button')
+                | 发送
+      #small-chat
+        span.badge.badge-warning.pull-right 5
+        a.open-small-chat
+          i.fa.fa-comments
+      // mini聊天窗口结束
+    // 全局js
+    script(src='js/jquery-2.1.1.min.js')
+    script(src='js/bootstrap.min.js?v=3.4.0')
+    script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+    script(src='js/plugins/slimscroll/jquery.slimscroll.min.js')
+    script(src='js/plugins/layer/layer.min.js')
+    // 自定义js
+    script(src='js/hplus.js?v=3.0.0')
+    script(type='text/javascript', src='js/contabs.js')
+    // 第三方插件
+    script(src='js/plugins/pace/pace.min.js')
